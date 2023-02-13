@@ -1,14 +1,16 @@
-// Напиши скрипт, який під час набору тексту в інпуті input#name-input
-// (подія input), підставляє його поточне значення в span#name - output.
+console.log('--- task 05 ---');
+
+// Напиши скрипт, який:
+// # 1. під час набору тексту в інпуті input#name - input (подія input),
+// # 2. підставляє його поточне значення в span#name - output.
 // Якщо інпут порожній, у спані повинен відображатися рядок "Anonymous".
 
-console.log('--- task 05 ---');
+// РІШЕННЯ:
 
 const inputNameRef = document.querySelector('#name-input');
 const outputNameRef = document.querySelector('#name-output');
-
-// console.log('inputRef', inputNameRef);
-// console.log('outputNameRef', outputNameRef);
+// console.log('inputNameRef: ', inputNameRef);
+// console.log('outputNameRef: ', outputNameRef);
 
 inputNameRef.addEventListener('input', onInputName);
 

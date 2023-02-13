@@ -1,17 +1,18 @@
-// Напиши скрипт, який під час втрати фокусу на інпуті (подія blur),
-// перевіряє його вміст щодо правильної кількості введених символів.
-
-// Яка кількість символів повинна бути в інпуті,
-//    зазначається в його атрибуті data - length.
-// Якщо введена правильна кількість символів, то border інпуту стає зеленим,
-//    якщо неправильна кількість - червоним.
-
 console.log('--- task 06 ---');
 
+// Напиши скрипт, який:
+// # 1. під час втрати фокусу на інпуті(подія blur), перевіряє його вміст
+//      щодо правильної кількості введених символів.
+// # 2. Якщо введена правильна кількість символів, то border інпуту стає зеленим,
+//      якщо неправильна кількість - червоним.
+// Яка кількість символів повинна бути в інпуті, зазначається в його атрибуті data - length.
+
+// РІШЕННЯ:
+
 const inputRef = document.querySelector('#validation-input');
-// console.log('inputRef', inputRef);
 const minLengthText = Number(inputRef.dataset.length);
-// console.log('minLengthText', minLengthText);
+// console.log('inputRef: ', inputRef);
+// console.log('minLengthText: ', minLengthText);
 
 inputRef.addEventListener('input', onInputBlur);
 

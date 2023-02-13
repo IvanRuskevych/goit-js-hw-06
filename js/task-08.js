@@ -1,5 +1,6 @@
-// Напиши скрипт управління формою логіна.
+console.log('--- task 08 ---');
 
+// Напиши скрипт управління формою логіна.
 // # 1. Обробка відправлення форми form.login-form повинна відбуватися відповідно
 //      до події submit.
 // # 2. Під час відправлення форми сторінка не повинна перезавантажуватися.
@@ -11,8 +12,10 @@
 // # 5. Виведи об'єкт із введеними даними в консоль і очисти значення полів форми
 //      методом reset.
 
+// РІШЕННЯ:
+
 const formRef = document.querySelector('.login-form');
-// console.log('formRef', formRef);
+// console.log('formRef: ', formRef);
 
 // # 1.
 formRef.addEventListener('submit', onFormSubmit);
@@ -33,7 +36,7 @@ function onFormSubmit(event) {
   const {
     elements: { email, password },
   } = event.currentTarget;
-  //   console.log('event.currentTarget', event.currentTarget);
+  //   console.log('event.currentTarget: ', event.currentTarget);
   //   console.log(email.value, password.value);
 
   const objFormData = {
