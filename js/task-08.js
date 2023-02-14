@@ -24,28 +24,21 @@ function onFormSubmit(event) {
   // # 2.
   event.preventDefault();
 
-  // # 3.
-  const formData = new FormData(formRef);
-  formData.forEach((value) => {
-    if (value === '') {
-      alert('Потрібно заповнити всі поля форми');
-    }
-  });
-
   // # 4.
   const {
     elements: { email, password },
   } = event.currentTarget;
   //   console.log('event.currentTarget: ', event.currentTarget);
-  //   console.log(email.value, password.value);
-
   const objFormData = {
     email: email.value,
     password: password.value,
   };
+  // console.log(objFormData.email, objFormData.password);
 
-  // # 5.
-  console.log("Об'єкт отриманих даних: ", objFormData);
+  // # 3. & 5.
+  if (objFormData.email === '' || objFormData.password === '') {
+    alert('Потрібно заповнити всі поля форми!');
+  } else console.log("Об'єкт отриманих даних: ", objFormData);
 
   formRef.reset();
 }

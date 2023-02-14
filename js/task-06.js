@@ -5,7 +5,7 @@ console.log('--- task 06 ---');
 //      щодо правильної кількості введених символів.
 // # 2. Якщо введена правильна кількість символів, то border інпуту стає зеленим,
 //      якщо неправильна кількість - червоним.
-// Яка кількість символів повинна бути в інпуті, зазначається в його атрибуті data - length.
+// # 3. Яка кількість символів повинна бути в інпуті, зазначається в його атрибуті data - length.
 
 // РІШЕННЯ:
 
@@ -17,7 +17,7 @@ const minLengthText = Number(inputRef.dataset.length);
 inputRef.addEventListener('input', onInputBlur);
 
 function onInputBlur(evt) {
-  if (evt.currentTarget.value.length >= minLengthText) {
+  if (evt.currentTarget.value.length === minLengthText) {
     inputRef.classList.add('valid');
     inputRef.classList.remove('invalid');
   } else {
